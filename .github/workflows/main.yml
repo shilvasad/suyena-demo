@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Updated to Node.js 20.x to be compatible with latest firebase-tools
+          node-version: '22' # Updated to Node.js 22.x to be compatible with latest firebase-tools
           cache: 'npm'
 
       - name: Install dependencies
