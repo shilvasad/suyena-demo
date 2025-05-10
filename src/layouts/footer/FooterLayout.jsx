@@ -1,8 +1,9 @@
 import React from 'react'
+import './FooterLayout.scss'
 
 function FooterLayout() {
   return (
-    <footer>
+    <footer className="footer-layout">
         Page Footer
     </footer>
   )

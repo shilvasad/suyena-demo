@@ -1,0 +1,54 @@
+// Colors
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$background-color: #f5f6fa;
+$white: #ffffff;
+$border-color: #dcdde1;
+
+// Typography
+$font-family: 'Roboto', sans-serif;
+$heading-font-size: 2rem;
+$subheading-font-size: 1.5rem;
+$text-font-size: 1rem;
+
+// Spacing
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 2rem;
+
+// Breakpoints
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 992px;
+
+
+nav {
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: $spacing-medium;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-medium;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        color: $text-color;
+        text-decoration: none;
+        padding: $spacing-small;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $primary-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
