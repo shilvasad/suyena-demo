@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Specify your project's Node.js version. '18' is a good LTS.
+          node-version: '20' # Updated to Node.js 20.x to be compatible with latest firebase-tools
           cache: 'npm'
 
       - name: Install dependencies
@@ -26,11 +26,11 @@ jobs:
         run: npm run build # This should create the 'dist' folder as per your firebase.json
 
       - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0 # Official Firebase action
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}' # Automatically provided by GitHub
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YOUR_PROJECT_NAME }}' # Create this secret in your repository
-          channelId: live # Deploy to the live channel. For preview channels, you can use 'preview' or a custom ID.
-          projectId: 'suyena-demo-app' # Replace with your Firebase Project ID
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YOUR_PROJECT_NAME }}' # Ensure this secret name is correct
+          channelId: live
+          projectId: 'suyena-demo-app' # You had this correctly set to your project ID
         env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels # Optional: enables preview channel features if you use them
+          FIREBASE_CLI_PREVIEWS: hostingchannels
